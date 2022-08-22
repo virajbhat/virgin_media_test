@@ -87,8 +87,10 @@ class tranctions_composite_transform(beam.PTransform):
     )
 
 
-p = beam.Pipeline()
-result = p | tranctions_composite_transform()
-csv_result = result | 'csv_output' >> beam.ParDo(write_list())
-jsonl_result = result |'jsonl_output' >> beam.io.WriteToText(file_path_prefix=output_prefix, file_name_suffix='.jsonl.gz', header=['date', 'Total_amount'])
-p.run()
+if __name__ == '__main__':
+    p = beam.Pipeline()
+    result = p | tranctions_composite_transform()
+    out = result | beam.Map(print)
+    csv_result = result | 'csv_output' >> beam.ParDo(write_list())
+    jsonl_result = result |'jsonl_output' >> beam.io.WriteToText(file_path_prefix=output_prefix, file_name_suffix='.jsonl.gz', header=['date', 'Total_amount'])
+    p.run()
