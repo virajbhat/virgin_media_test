@@ -3,7 +3,7 @@
 This project aims to demonstrate the use of Apache - beam
 Using python sdk. 
 
-Markup :  ### Input ###
+<h3> Input </h3>
 
 The input data is taken from gs://cloud-samples-data/bigquery/sample-transactions/transactions.csv
 It is written in varible input_file in transactions.py to
