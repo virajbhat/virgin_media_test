@@ -6,8 +6,6 @@ import apache_beam as beam
 from transactions import tranctions_composite_transform
 
 
-
-
 class TestTransactions(unittest.TestCase):
 
   def test_transactions(self):

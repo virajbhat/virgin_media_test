@@ -4,8 +4,8 @@ import datetime
 import os
 
 
-input_file = 'gs://cloud-samples-data/bigquery/sample-transactions/transactions.csv'
-output_prefix = os. getcwd() + '\\output\\results.csv'
+input_file = r'gs://cloud-samples-data/bigquery/sample-transactions/transactions.csv'
+output_prefix = os. getcwd() + r'/output/results.csv'
 
 
 class Split(beam.DoFn):
