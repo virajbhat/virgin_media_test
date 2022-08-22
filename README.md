@@ -22,3 +22,7 @@ for increased readability.
 
 The output path is ./output/results.csv
 
+
+Unit tests:
+
+Unit tests are written in tests_transactions.py The whole composite transform is tested.
